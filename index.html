@@ -6,75 +6,87 @@
     <title>汉字识读测试</title>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        /* 全局样式 */
-        body {
-            font-family: 'Noto Sans SC', sans-serif;
-            background: linear-gradient(to bottom, #f0f8ff, #e6f7ff);
-            color: #333;
-            line-height: 1.6;
-            letter-spacing: 0.5px;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        h1 {
-            text-align: center;
-            margin: 20px 0;
-            font-size: 28px;
-        }
-        .container {
-            width: 90%;
-            max-width: 600px;
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        /* 按钮样式 */
-        button {
-            background-color: #007BFF;
-            color: white;
-            border: none;
-            border-radius: 25px;
-            padding: 10px 20px;
-            cursor: pointer;
-            margin: 10px;
-            transition: transform 0.2s ease-in-out;
-        }
-        button:hover {
-            transform: scale(1.05);
-        }
-        /* 卡片样式 */
-        .card {
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            padding: 15px;
-            margin-bottom: 15px;
-            transition: transform 0.2s ease-in-out;
-        }
-        .card:hover {
-            transform: translateY(-5px);
-        }
-        /* 测试报告卡片样式 */
-        .report-card {
-            background: #f9f9f9;
-            border-left: 5px solid #007BFF;
-            padding: 20px;
-            margin-top: 20px;
-        }
-        /* 响应式设计 */
-        @media (max-width: 768px) {
+            /* 全局样式 */
+            body {
+                font-family: 'Noto Sans SC', sans-serif;
+                background: linear-gradient(to bottom, #f0f8ff, #e6f7ff);
+                color: #333;
+                line-height: 1.6;
+                letter-spacing: 0.5px;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
             h1 {
-                font-size: 24px;
+                text-align: center;
+                margin: 20px 0;
+                font-size: 28px;
+            }
+            .container {
+                width: auto;
+                max-width: 600px;
+                background: white;
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
+            /* 按钮样式 */
+            .button-container {
+                max-width: 200px; /* 缩短按钮的最大宽度 */
+                margin: 0 auto; /* 水平居中 */
+                text-align: center;
             }
             button {
-                width: 100%;
+                background-color: #007BFF;
+                color: white;
+                border: none;
+                border-radius: 25px;
+                padding: 8px 16px; /* 调整内边距 */
+                cursor: pointer;
+                margin: 10px 0;
+                transition: transform 0.2s ease-in-out;
+                font-size: inherit; /* 继承父级字体大小 */
+                width: auto; /* 自动宽度 */
+                display: block; /* 块级显示以便居中 */
             }
-        }
-    </style>
+            button:hover {
+                transform: scale(1.05);
+            }
+            /* 卡片样式 */
+            .card {
+                background: white;
+                border-radius: 10px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                padding: 15px;
+                margin-bottom: 15px;
+                transition: transform 0.2s ease-in-out;
+            }
+            .card:hover {
+                transform: translateY(-5px);
+            }
+            /* 测试报告卡片样式 */
+            .report-card {
+                background: #f9f9f9;
+                border-left: 5px solid #007BFF;
+                padding: 20px;
+                margin-top: 20px;
+            }
+            /* 响应式设计 */
+            @media (max-width: 768px) {
+                h1 {
+                    font-size: 24px;
+                }
+                .button-container {
+                    max-width: 150px; /* 手机端按钮更短 */
+                }
+                button {
+                    font-size: inherit; /* 确保字体大小一致 */
+                }
+            }
+        </style>
+
 </head>
 <body>
     <h1>汉字识读测试📝</h1>
@@ -103,23 +115,44 @@
             <button onclick="startTest('grade3-up')">三年级上册</button>
             <div class="description">
                 <!-- 在这里填写一年级上册字库的介绍 -->
-                本册包含 100 个基础汉字。
+                本册包含 300 个基础汉字。
             </div>
             <button onclick="startTest('grade3-down')">三年级下册</button>
             <div class="description">
                 <!-- 在这里填写一年级下册字库的介绍 -->
-                本册包含 250 个基础汉字。
+                本册包含 300 个基础汉字。
             </div>
             <button onclick="startTest('grade4-up')">四年级上册</button>
             <div class="description">
                 <!-- 在这里填写一年级上册字库的介绍 -->
-                本册包含 100 个基础汉字。
+                本册包含 200 个基础汉字。
             </div>
             <button onclick="startTest('grade4-down')">四年级下册</button>
             <div class="description">
                 <!-- 在这里填写一年级下册字库的介绍 -->
-                本册包含 250 个基础汉字。
+                本册包含 200 个基础汉字。
             </div>
+            <button onclick="startTest('grade5-up')">五年级上册</button>
+            <div class="description">
+                <!-- 在这里填写一年级上册字库的介绍 -->
+                本册包含 150 个基础汉字。
+            </div>
+            <button onclick="startTest('grade5-down')">五年级下册</button>
+            <div class="description">
+                <!-- 在这里填写一年级下册字库的介绍 -->
+                本册包含 150 个基础汉字。
+            </div>
+            <button onclick="startTest('grade6-up')">六年级上册</button>
+            <div class="description">
+                <!-- 在这里填写一年级上册字库的介绍 -->
+                本册包含 80 个基础汉字。
+            </div>
+            <button onclick="startTest('grade6-down')">六年级下册</button>
+            <div class="description">
+                <!-- 在这里填写一年级下册字库的介绍 -->
+                本册包含 80 个基础汉字。
+            </div>
+
 
             <div class="card">
                 <div class="card-header">
