@@ -25,7 +25,7 @@
                 font-size: 28px;
             }
             .container {
-                width: auto;
+                width: 90%;
                 max-width: 600px;
                 background: white;
                 padding: 20px;
@@ -33,23 +33,15 @@
                 box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             }
             /* 按钮样式 */
-            .button-container {
-                max-width: 200px; /* 缩短按钮的最大宽度 */
-                margin: 0 auto; /* 水平居中 */
-                text-align: center;
-            }
             button {
                 background-color: #007BFF;
                 color: white;
                 border: none;
                 border-radius: 25px;
-                padding: 8px 16px; /* 调整内边距 */
+                padding: 10px 20px;
                 cursor: pointer;
-                margin: 10px 0;
+                margin: 10px;
                 transition: transform 0.2s ease-in-out;
-                font-size: inherit; /* 继承父级字体大小 */
-                width: auto; /* 自动宽度 */
-                display: block; /* 块级显示以便居中 */
             }
             button:hover {
                 transform: scale(1.05);
@@ -79,7 +71,7 @@
                     font-size: 24px;
                 }
                 .button-container {
-                    max-width: 150px; /* 手机端按钮更短 */
+                    max-width: AUTO; /* 手机端按钮更短 */
                 }
                 button {
                     font-size: inherit; /* 确保字体大小一致 */
